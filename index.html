@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Fact & Photo Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Cat Fact & Photo Generator</h1>
+
+    <!-- Filter Form -->
+    <form id="factForm" class="card form-card">
+      <div class="form-row">
+        <!-- Tag Input -->
+        <div class="form-group">
+          <label for="tagInput">Cat Tag:</label>
+          <input type="text" id="tagInput" placeholder="e.g. cute, sleepy, gif">
+        </div>
+
+        <!-- Dynamic Color Dropdown populated from Cataas API -->
+        <div class="form-group">
+          <label for="colorSelect">Cat Coat Color:</label>
+          <select id="colorSelect">
+            <option value="">Any Color</option>
+          </select>
+        </div>
+
+        <!-- Max Fact Length -->
+        <div class="form-group">
+          <label for="maxLength">Max Fact Length:</label>
+          <input type="number" id="maxLength" min="20" max="500" placeholder="e.g. 100">
+        </div>
+      </div>
+
+      <button type="submit" id="getCatBtn">Get New Cat</button>
+    </form>
+
+    <div id="status" class="status-message"></div>
+
+    <!-- Main Content Display -->
+    <div class="content-row">
+      <div class="display-container">
+        <!-- Cat Picture Box -->
+        <div class="card image-card">
+          <img id="spinner" class="spinner-img hidden" src="30-301101_calico-cat-face-vector-librarcy-download-cartoon-cat.png" alt="Loading...">
+          <img id="catImage" src="https://cataas.com/cat" alt="Random cat">
+        </div>
+
+        <!-- Cat Fact Box -->
+        <div id="factBox" class="card fact-card">
+          <p id="factText">Your cat fact will appear here!</p>
+        </div>
+      </div>
+
+      <!-- Welcome Text -->
+      <p id="initialText" class="welcome-text">
+        Select a coat color or tag above to generate your customized cat fact and picture!
+      </p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
