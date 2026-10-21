@@ -120,8 +120,8 @@ h1 {
 }
 
 .spinner-img {
-  width:200px;
-  height: 200px;
+  width:244px;
+  height: 244px;
   animation: spin 1s linear infinite;
 }
 
